@@ -7,7 +7,7 @@ import requests
 
 def get_urt(address):
     # 以get请求为例http://api.map.baidu.com/geocoder/v2/?address=百度大厦&output=json&ak=yourak
-    queryStr = ''
+    queryStr = f'/geocoding/v3/?address={address}&output=json&ak=yourak'
 
     # 对queryStr进行转码，safe内的保留字符不转换
     encodedStr = parse.quote(queryStr, safe="/:=&?#+!$,;'@()*[]")
